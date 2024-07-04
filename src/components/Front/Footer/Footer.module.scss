@@ -1,0 +1,21 @@
+// .colophon {
+
+// }
+footer {
+    border: 1px dotted #350404;
+    //fixed bottom
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    color: #350404;
+    // padding: 1rem;
+    .colophon {
+        text-align: center;
+        font-size: 0.8rem;
+        a {
+            color: #350404;
+        }
+    }
+
+}
