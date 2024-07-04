@@ -1,5 +1,5 @@
-import InputForm from "../../../../components/Form/InputForm.tsx";
-import TextareaForm from "../../../../components/Form/TextareaForm.tsx";
+import InputForm from "../../../../components/Form/InputForm.jsx";
+import TextareaForm from "../../../../components/Form/TextareaForm.jsx";
 
 const FormCategory = ({handleSubmit,dataForm, handleChange,dataError,isLoading}) => {
     return (

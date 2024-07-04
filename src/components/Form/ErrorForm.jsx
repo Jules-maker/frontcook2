@@ -1,5 +1,5 @@
 
-const ErrorForm = ({ message='' }: { message: string }) => {
+const ErrorForm = ({ message='' }) => {
     return (
         <p className="error">{ message }</p>
     )

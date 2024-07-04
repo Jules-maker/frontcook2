@@ -1,9 +1,9 @@
 import {FormEvent, useEffect, useState} from 'react';
 import {useParams} from "react-router";
-import {apiEditCategory, getOneCategory} from "../../../api/apicategory.tsx";
-import FormCategory from "./components/FormCategory.tsx";
+import {apiEditCategory, getOneCategory} from "../../../api/apicategory.jsx";
+import FormCategory from "./components/FormCategory.jsx";
 import {useNavigate} from "react-router-dom";
-import Loader from "../../../components/Loader/Loader.tsx";
+import Loader from "../../../components/Loader/Loader.jsx";
 const EditCategory = () => {
     const {id} = useParams();
     const [isOk, setIsOk] = useState<boolean>(false);
@@ -12,7 +12,7 @@ const EditCategory = () => {
     const [dataForm, setDataForm] = useState<object>({title: '',content: ''})
     const [dataError, setDataError] = useState<object>({title: '',content: ''})
 
-    async function handleSubmit(evt: FormEvent<HTMLFormElement>) {
+    async function handleSubmit(evt) {
         evt.preventDefault();
         setIsLoading(true)
         try {

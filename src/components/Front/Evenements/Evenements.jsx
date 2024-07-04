@@ -22,17 +22,17 @@ const Evenements = () => {
         setShowCount(!showCount);
         
     }
-    const handleInput = (e: any) => {
+    const handleInput = () => {
         console.log(e.target.value);
     }
-    const handleBlur = (e: any) => {
+    const handleBlur = () => {
         console.log('Vous avez quitté le champ : ', e.target.value);
     }
-    const handleLink = (e: any) => {
+    const handleLink = () => {
         e.preventDefault();
         console.log('Vous avez cliqué sur le lien');
     }
-    const handleParameter = (param: any) => (e: any) => {
+    const handleParameter = (param) => () => {
         console.log(param,"param");
     }
         return (

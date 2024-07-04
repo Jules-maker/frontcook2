@@ -1,11 +1,13 @@
+//les boutons etc, correspond au projet frontcook
+// Path: frontcook/src/assets/css/_theme.scss
 .btn {
-  padding: .5rem 2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s opacity;
-  font-size: 1.2rem;
-  display: inline-block;
-  &:hover {
-    opacity: 0.8;
+    padding: .5rem 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s opacity;
+    font-size: 1.2rem;
+    display: inline-block;
+    &:hover {
+      opacity: 0.8;
+    }
   }
-}

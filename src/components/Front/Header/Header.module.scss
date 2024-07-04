@@ -6,13 +6,7 @@
         display: inline;
         margin-right: 1rem;
         a {
-            color: #7b7b7b;
-            &[class^="active"]  {
-                color: #0915bc !important;
-                font-weight: bolder;
-                font-size: 2rem;
-            }
+            color: #bc0909;
         }
     }
-    
 }

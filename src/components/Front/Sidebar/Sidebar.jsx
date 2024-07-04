@@ -1,4 +1,4 @@
-const SideBar = ({ nom, age, majeur = false }: { nom: string, age: number, majeur?: boolean}) => {
+const SideBar = ({ nom, age, majeur = false }) => {
     // const {nom,age} = props;
     
     return (

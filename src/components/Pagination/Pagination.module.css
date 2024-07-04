@@ -1,0 +1,16 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+.pagination li {
+  padding: 0.5rem 0.7rem;
+  margin: 0 0.2rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+.pagination li:hover, .pagination li.current {
+  background-color: var(--accent-primary);
+  color: #fff;
+}/*# sourceMappingURL=Pagination.module.css.map */

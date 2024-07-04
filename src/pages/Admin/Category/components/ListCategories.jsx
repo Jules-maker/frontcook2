@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
-import {apiDeleteCategory} from "../../../../api/apicategory.tsx";
+import {apiDeleteCategory} from "../../../../api/apicategory.jsx";
 
-const ListCategories = ({ categories }: { categories: Array<any> }) => {
+const ListCategories = ({ categories }) => {
   console.log("LOADlistCat" ,categories);
 
   async function handleRemoveRecette(evt, id) {

@@ -1,0 +1,191 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--gray-2);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapform {
+  width: 100%;
+  max-width: 500px;
+  margin: 3rem auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: red;
+  transform: translateY(-1rem);
+}
+
+input[type=checkbox] {
+  width: 20px;
+}
+
+.input-box {
+  position: relative;
+}
+.input-box span.error {
+  position: absolute;
+  bottom: -1rem;
+  left: 1px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.conteneur {
+  display: grid;
+  margin: 1em 0;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 2em;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+}
+
+.wrap_pad {
+  padding: 0 1rem;
+}
+
+.p-5 {
+  padding: 5px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.m-5 {
+  margin: 5px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.my-30 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s opacity;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+.btn:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=index.css.map */

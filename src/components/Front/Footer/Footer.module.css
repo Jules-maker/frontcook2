@@ -1,0 +1,15 @@
+footer {
+  border: 1px dotted #350404;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  color: #350404;
+}
+footer .colophon {
+  text-align: center;
+  font-size: 0.8rem;
+}
+footer .colophon a {
+  color: #350404;
+}/*# sourceMappingURL=Footer.module.css.map */

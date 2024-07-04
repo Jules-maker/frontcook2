@@ -1,5 +1,4 @@
 // import React from "react";
-import Header from "../components/Front/Header/Header";
 import { useState } from "react";
 const Molki = () => {
     const [startGame, setStartGame] = useState(false);
@@ -9,7 +8,7 @@ const Molki = () => {
     const [scoreTeam1, setScoreTeam1] = useState(0);
     const [scoreTeam2, setScoreTeam2] = useState(0);
 
-    const assignPlayersName = (e:any) => {
+    const assignPlayersName = (e) => {
         e.preventDefault();
         console.log('form submitted');
         setTeam1(e.target.team1.value);

@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
-import {getAllCategories} from "../../../api/apicategory.tsx";
-import ListCategories from "./components/ListCategories.tsx";
-import Loader from "../../../components/Loader/Loader.tsx";
-import Pagination from "../../../components/Pagination/Pagination.tsx";
+import {getAllCategories} from "../../../api/apicategory.jsx";
+import ListCategories from "./components/ListCategories.jsx";
+import Loader from "../../../components/Loader/Loader.jsx";
+import Pagination from "../../../components/Pagination/Pagination.jsx";
 import {Link} from "react-router-dom";
 
 const Category = () => {

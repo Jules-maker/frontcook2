@@ -15,7 +15,7 @@ const AddCategory = () => {
         content: ""
     });
 
-    async function handleSubmit(evt: FormEvent<HTMLFormElement>) {
+    async function handleSubmit() {
         evt.preventDefault();
         setIsLoading(true);
         try {

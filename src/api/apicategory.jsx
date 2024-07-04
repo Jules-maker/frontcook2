@@ -1,7 +1,7 @@
 
 const URL_BASE = 'http://localhost:2323/api/category'
 
-export async function getAllCategories(link:string)
+export async function getAllCategories(link)
 {
     const response = await fetch(`${URL_BASE}${link}`, {
         headers: {
@@ -23,7 +23,7 @@ export async function apiAddCategory(data = {}){
     return await res.json();
 }
 
-export async function getOneCategory(id: string) {
+export async function getOneCategory(id) {
     const response = await fetch(`${URL_BASE}/${id}`, {
         headers: {
             'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ export async function getOneCategory(id: string) {
 }
 
 
-export async function apiEditCategory(id: string, data: JSON) {
+export async function apiEditCategory(id,data) {
     const res = await fetch(`${URL_BASE}/${id}`, {
         method: 'PUT',
         headers: {
@@ -44,7 +44,7 @@ export async function apiEditCategory(id: string, data: JSON) {
     return await res.json();
 }
 
-export async function apiDeleteCategory(id: string) {
+export async function apiDeleteCategory(id) {
     const res = await fetch(`${URL_BASE}/${id}`, {
         method: 'DELETE',
         headers: {

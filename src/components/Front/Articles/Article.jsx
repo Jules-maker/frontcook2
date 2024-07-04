@@ -1,7 +1,7 @@
-import ArticleModel from "../../../models/articleModel";
+//import ArticleModel from "../../../models/articleModel"; //TODO: vérifier concordance de l'ancien modèle
 
 // const Article = ( {key,title,content,publish}: {key:string,title:string,content:string,publish:boolean} ) => {
-    const Article = ( {article}: {article : ArticleModel} ) => {
+    const Article = ( {article}) => {
     return (
         <>
             <div key={article.title}>
