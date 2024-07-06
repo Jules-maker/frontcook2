@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+  html {
+    height: 100%;
+  }
   body {
+    height: 100%;
     font-family: var(--font-family);
-    color: var(--text-color);
-    background-color: var(--gray-2);
+    color: var(--text-color-black);
+    background-color: var(--background-color);
   }
   
   ul {
@@ -19,4 +22,16 @@
     height: auto;
   }
   a {text-decoration: none;}
+
+  .kadwa-regular {
+    font-family: "Kadwa", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kadwa-bold {
+    font-family: "Kadwa", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
   

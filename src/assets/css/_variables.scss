@@ -1,14 +1,20 @@
+// font 
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+  --font-family: 'Kadwa', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary-color: #06ab78;
+  --secondary-color: #012635;
+  --text-color-black: #131313;
+  --text-color-white: #f8f8f8;
+  --background-color: var(--text-color-white);
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none; //This property controls whether the browser is allowed to synthesize bold or italic font faces when a font family lacks bold or italic styles. Setting it to none means the browser will not synthesize a bold or italic version if the font family does not include it, which can help maintain the visual integrity of your design.
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light dark;
   
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-  
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+}
+
+

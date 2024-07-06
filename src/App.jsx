@@ -8,6 +8,7 @@ import Articles from './components/Front/Articles/Articles';
 import Evenements from './components/Front/Evenements/Evenements';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Molki from './pages/Molki';
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -15,19 +16,14 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
+        <Header/>
         <Routes>
           <Route path="/" element = {
             <>
-          <Evenements />
-          <SideBar nom="michel" age={22} />
-          <SideBar nom="Bernard" age={12} majeur={false} />
-          <SideBar nom="Jack" age={22}>
-           
-          </SideBar>
-          <Articles />
+          <HomePage/>
           </>
-        }/>
+        }/> 
+
           <Route path='/molki' Component={Molki} />
         </Routes>
         <Footer />

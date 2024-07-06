@@ -1,21 +1,17 @@
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
-
+import logo from '../../../assets/logo-min.svg';
 const Header = () => {
     return (
-        <header className={styles.masthead}>
-            <div className="wrap">
-                <div className="d-flex justify-content-space-between">
-                    <div className="logo">LOGO</div>
-                    <nav>
-                        <ul>
-                            <li> <Link to="/">Home</Link></li>
-                            {/* <li><a href="/molki">Molki</a></li> */}
-                            <li><Link to="/molki">Molki</Link></li> 
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+        <header className={`${styles.masthead} flex `}>
+                <nav className='flex  justify-center  items-center'>
+                    <ul className='flex justify-center'>
+                        <li className=''> <Link to="/"><img src={logo} alt="logo cookerApp" /></Link></li>
+                        <li> <Link to="/">Home</Link></li>
+                        <li><Link to="/">Vos commandes</Link></li>
+                        <li><Link to="/molki">Les Chefs</Link></li>
+                    </ul>
+                </nav>
         </header>
     );
 };

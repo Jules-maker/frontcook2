@@ -1,12 +1,37 @@
+// @use '../../../App.scss' as *; on utilise root avec ses variables définies dans App.scss
+@import url("https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap");
 .masthead {
-    background-color: yellow;
-    color: black;
-    padding: 1rem;
-    nav ul li {
-        display: inline;
-        margin-right: 1rem;
-        a {
-            color: #bc0909;
+    background-color: #06ab78;
+    // color: black;
+    // padding: 1rem;
+    color: var(--text-color-white);
+    font-family: var(--font-family);
+    height: 5rem;
+    nav {
+        //center verticaly itself
+        // align-self: auto;
+        ul {
+            // height: fit-content;
+            // display: flex;
+            // justify-content: center;
+            // padding: 1rem;
+            // align-items: center;
+            // align-content: center;
+            // margin: 0 auto;
+
+            li {
+                // display: inline;
+                margin-right: 1rem;
+                // &:first-child {
+                //     padding-top: 1rem;
+                // }
+                img {
+                    width: 2rem;
+                }
+                a {
+                    color: var(--text-color-white);
+                }
+            }
         }
     }
 }

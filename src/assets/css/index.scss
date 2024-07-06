@@ -1,9 +1,9 @@
-@use "./variables";
-@use "./base";
-@use "./form";
-@use "./flex";
-@use "./utils";
-@use "./theme";
-
+@use "./variables"; //root variables
+@use "./base"; //base styles
+//@use "./form"; //form styles, not used atm
+//@use "./flex"; //flex styles if needed
+// @use "./utils"; // à voir si on veut override tailwind
+@use "./theme"; //btn etc
 
 @use "./media_queries";
+@import './tailwind.css'; // Import de tailwind.css au même niveau
