@@ -7,30 +7,14 @@
     color: var(--text-color-white);
     font-family: var(--font-family);
     height: 5rem;
-    nav {
-        //center verticaly itself
-        // align-self: auto;
-        ul {
-            // height: fit-content;
-            // display: flex;
-            // justify-content: center;
-            // padding: 1rem;
-            // align-items: center;
-            // align-content: center;
-            // margin: 0 auto;
+    border: rgb(62, 7, 180) 1px solid;
+    nav ul {
+        margin-left:1%;
 
-            li {
-                // display: inline;
-                margin-right: 1rem;
-                // &:first-child {
-                //     padding-top: 1rem;
-                // }
-                img {
-                    width: 2rem;
-                }
-                a {
-                    color: var(--text-color-white);
-                }
+        li {
+            margin-right: 10%;
+            a {
+                color: var(--text-color-white);
             }
         }
     }
