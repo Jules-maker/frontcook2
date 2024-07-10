@@ -12,11 +12,26 @@
     color: var(--text-color-black);
     background-color: var(--background-color);
   }
-  
+   /*la div root est parente de tout le contenu et est l'équivalent de body, on se raporte donc au viewport car body a height: 100% et #root aussi donc on peut se raporter au parent de body qui est html qui a aussi height: 100% et qui se rapporte donc au viewport
+   On utilise flex avec flex:1 dans App.js pour que le footer soit toujours en bas de la page et que le contenu soit toujours en haut de la page
+   */
+  #root {
+    min-height: 100svh; //smallest viewport height
+    display: flex;
+    flex-direction: column;
+  }
   ul {
     list-style: none;
   }
-  
+  h1 {
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  footer {
+    height: var(--footer-height);
+  }
   img {
     width: 100%;
     height: auto;
@@ -34,4 +49,25 @@
     font-weight: 700;
     font-style: normal;
   }
+  // ::-webkit-scrollbar {
+  //   width: 10px;
+  // }
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #F1F1F1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 2px;
+   // border: 2px solid var(--primary-color); // Sets the border width, style, and color
+
+    background-color: var(--secondary-color); // Sets the background color
+  }
   
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: darken(#06ab78, 10%);
+  }

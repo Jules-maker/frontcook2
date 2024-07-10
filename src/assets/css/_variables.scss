@@ -7,6 +7,8 @@
   --text-color-black: #131313;
   --text-color-white: #f8f8f8;
   --background-color: var(--text-color-white);
+  --footer-height: 5rem;
+  --header-height: 5rem;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none; //This property controls whether the browser is allowed to synthesize bold or italic font faces when a font family lacks bold or italic styles. Setting it to none means the browser will not synthesize a bold or italic version if the font family does not include it, which can help maintain the visual integrity of your design.

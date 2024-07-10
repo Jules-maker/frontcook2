@@ -1,16 +1,13 @@
 // @use '../../../App.scss' as *; on utilise root avec ses variables définies dans App.scss
 @import url("https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap");
 .masthead {
-    background-color: #06ab78;
-    // color: black;
-    // padding: 1rem;
+    background-color: var(--primary-color);
     color: var(--text-color-white);
     font-family: var(--font-family);
-    height: 5rem;
-    border: rgb(62, 7, 180) 1px solid;
+    height: var(--header-height);
+    
     nav ul {
         margin-left:1%;
-
         li {
             margin-right: 10%;
             a {
@@ -18,4 +15,11 @@
             }
         }
     }
+}
+@media (prefers-color-scheme: dark) {
+    .masthead {
+        
+        background-color: var(--secondary-color);
+    }
+    //TODO: ajouter les styles pour le logo
 }
