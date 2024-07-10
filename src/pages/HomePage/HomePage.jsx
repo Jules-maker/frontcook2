@@ -4,7 +4,7 @@ import dish1 from '../../assets/dishes/Falafel-Pita-by-PictureTheRecipe.jpg';
 import dish2 from '../../assets/dishes/salade-chaude-automne-legumes.jpg';
 import dish3 from '../../assets/dishes/vue-dessus-delicieuse-tortilla-espagnole.jpg';
 import dish4 from '../../assets/dishes/pates.png';
-import card_background from '../../assets/card-background.svg';
+import card_background from '../../assets/card-background-home.svg';
 const HomePage = () => {
     return (
         <main className={`${styles.homemain} w-4/5 mx-auto flex flex-col items-center`}>
@@ -151,13 +151,14 @@ const HomePage = () => {
 
                     </div>
                 </div>
-                <img src={card_background} alt="" />
-            <div className={`${styles['card-1']} m-4`}>
-                <p>hi</p>
-                <div>
-                    <a href="">ya un probleme</a>
+                <div className={`${styles['card-1']} m-4 relative`}>
+                    <img src={card_background} alt="background" className={`${styles['card-background']} absolute  `} />
+                    <div className={`${styles['card-content']} relative pl-40 pt-20 z-10`}>
+                        <p class='kadwa-bold'>Envie de découvrir un univers à part entier ?</p>
+                        <p class='kadwa-bold'>Découvrez le chef qui vous convient</p>
+                        <Link to="/chefs" className={styles.button}></Link>
+                    </div>
                 </div>
-            </div>
             </div>
         </main>
     );

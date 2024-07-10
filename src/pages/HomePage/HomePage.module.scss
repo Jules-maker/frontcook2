@@ -1,18 +1,70 @@
+$card-position: 4.5%;
+$card-width: 91%;
+$card-title-size: 2rem;
 .homemain {
-    // border: 1px solid red;
     position: relative;
-    height: fit-content; 
-    // padding-bottom: 25rem;
-    
+    height: fit-content;
+
     .card-1 {
-        height: 5rem;
-        width: 5rem;
+        z-index: 2;
+        color: white;
+        // border-radius: 1.2rem;
+        text-align: center;
+        // border: 1px solid rgb(151, 0, 181);
         position: relative;
-        border: 1px solid rgb(0, 0, 0);
-        // overflow: visible;
-        // background-image: url('../../assets/card-background.svg');
-        // background-size: contain;
-        // background-position: center;
-        // background-repeat: no-repeat;
+        height: -moz-fit-content;
+        height: 23em;
+
+        .card-background {
+            object-fit: cover;
+            border-radius: 1.5rem;
+            height: 100%;
+            width: $card-width;
+            // border: 1px solid blue;
+            /* margin: 0 auto; */
+            left: $card-position;
+        }
+
+        .card-content {
+            // padding: 2rem;
+            // border: 1px solid red;
+            width: $card-width;
+            left: $card-position;
+
+            p {
+                // margin: 0.5rem 0;
+                // margin-left: 5%;
+                font-size: $card-title-size;
+                // border: 1px solid green;
+                text-align: left;
+                width: fit-content;
+                line-height: 2.5em;
+            }
+
+            .button {
+                position: absolute;
+                display: block;
+                // margin: 1rem auto;
+                // right: $card-title-size;
+                right: calc($card-title-size + 2.5rem);
+                bottom: $card-title-size;
+                bottom: calc($card-title-size - 6rem);
+                border-radius: 0.5em;
+                background-color: var(--secondary-color);
+                width: fit-content;
+                height: 3.5em;
+                padding: 0 1.5rem;
+                text-align: center;
+                line-height: 3.5em;
+                color: white;
+                text-decoration: none;
+
+                &::after {
+                    content: "Voir les enseignes";
+                    display: block;
+                    color: white;
+                }
+            }
+        }
     }
 }

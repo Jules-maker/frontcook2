@@ -5,7 +5,7 @@ import loginIcon from '../../../assets/login.svg';
 import logoutIcon from '../../../assets/logout.svg';
 const Header = () => {
     return (
-        <header className={`${styles.masthead} flex mb-10`}>
+        <header className={`${styles.masthead} flex mb-16`}>
             <nav className='flex justify-between items-center w-full'>
                 <div className='flex items-center ml-4'>
                     <Link to="/"><img src={logo} alt="logo cookerApp" className='w-1/2 lg:ml-auto'/></Link>
