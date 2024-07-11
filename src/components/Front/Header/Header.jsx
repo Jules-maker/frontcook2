@@ -12,7 +12,7 @@ const Header = () => {
                 </div>
                 <ul className='flex justify-center flex-grow'>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/">Vos commandes</Link></li>
+                    <li><Link to="/order">Vos commandes</Link></li>
                     <li><Link to="/molki">Les Chefs</Link></li>
                 </ul>
                 <div className='flex items-center mr-4 gap-2'>

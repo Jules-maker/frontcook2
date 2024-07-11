@@ -1,0 +1,11 @@
+.error-page {
+  p {
+    color: var(--text-color-black);
+}
+a {
+    background-color: var(--primary-color) !important;
+    &:hover {
+        background-color: var(--secondary-color) !important;
+    }
+}
+}

@@ -1,81 +1,84 @@
-import { createBrowserRouter } from "react-router-dom";
-import App from "./App";
-import Molki from "./pages/Molki";
-import HomePage from "./pages/HomePage/HomePage";
-import Profil from "./pages/Profil/Profil";
-import Login from "./pages/Login/Login";
-import Admin from "./pages/Admin/Admin";
-import Dashboard from "./pages/Admin/Dashboard/Dashboard";
-import ErrorPage from "./pages/ErrorPage/ErrorPage";
-import Category from "./pages/Admin/Category/Category.jsx";
-import AddCategory from "./pages/Admin/Category/AddCategory.jsx";
-import EditCategory from "./pages/Admin/Category/EditCategory.jsx";
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App';
+import Molki from './pages/Molki';
+import HomePage from './pages/HomePage/HomePage';
+import Profil from './pages/Profil/Profil';
+import Login from './pages/Login/Login';
+import Admin from './pages/Admin/Admin';
+import Dashboard from './pages/Admin/Dashboard/Dashboard';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
+import Order from './pages/Order/Order';
+// import Category from './pages/Admin/Category/Category.jsx';
+// import AddCategory from './pages/Admin/Category/AddCategory.jsx';
+// import EditCategory from './pages/Admin/Category/EditCategory.jsx';
 
 //lazy loading
 
 // @ts-ignore
 
-
-
-export const Router = createBrowserRouter([
+const router = createBrowserRouter([
     {
         path: '/',
-        element: <App/>,
-        errorElement: <ErrorPage/>,
+        element: <App />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
-                element: <HomePage/>,
+                element: <HomePage />,
             },
             {
                 path: '/profil',
-                element: <Profil/>
+                element: <Profil />,
             },
             {
                 path: '/molki',
-                element: <Molki/>
+                element: <Molki />,
             },
             {
                 path: '/login',
-                element: <Login/>
+                element: <Login />,
+            },
+            {
+                path: '/order',
+                element: <Order />,
             }
-        ]
+        ],
     },
     {
         path: '/admin',
-        element: <Admin/>,
+        element: <Admin />,
         children: [
             {
                 index: true,
-                element: <Dashboard/>
+                element: <Dashboard />,
             },
-            {
-                path: '/admin/category',
-                element: <Category />
-            },
-            {
-                path: '/admin/category/add',
-                element: <AddCategory/>
-            },
-
-            {
-                path: '/admin/category/edit/:id',
-                element: <EditCategory />
-            },
-
-
+            // {
+            //     path: '/admin/category',
+            //     element: <Category />,
+            // },
+            // {
+            //     path: '/admin/category/add',
+            //     element: <AddCategory />,
+            // },
+            // {
+            //     path: '/admin/category/edit/:id',
+            //     element: <EditCategory />,
+            // },
             // {
             //     path: '/users',
             //     element: <AdminUsers/>
             // }
-        ]
+        ],
+    },
+    { 
+        path: '/molki',
+        element: <Molki />
     }
-
-
-
-
-    // { il n'aura pas le header et le footer
-    //     path: '/molki',
-    //     element: <Molki />
-    // }
 ]);
+
+const AppRouter = () => {
+    return <RouterProvider router={router} />;
+};
+
+export default AppRouter;
