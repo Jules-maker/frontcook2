@@ -1,5 +1,4 @@
-
 //WIP parent element of all content and is the equivalent of body, so we refer to the viewport because body has height: 100% and #root also does so we can refer to the parent of body which is html which also has height: 100% and which therefore refers to the viewport
 div[class*="flex-1"] {
-    border: 1px solid red;
+    // border: 1px solid red;
 }

@@ -9,9 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className='flex-1'>
-        <Outlet /> {/* Outlet est un composant de react-router-dom qui permet d'afficher les composants enfants de la route courante, un autre approche est { children } avec App({ children }) */}
-      </div>
+      <Outlet /> {/* Outlet est un composant de react-router-dom qui permet d'afficher les composants enfants de la route courante, un autre approche est { children } avec App({ children }) */}
       <Footer />
     </>
   );

@@ -1,30 +1,21 @@
-import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
-const Footer = () => {
 
-    return (
-        <footer className="shadow dark:bg-gray-800">
-            <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-                <span className="text-sm sm:text-center">
-                    © 2024 <a href="https://jules-giraud.xyz" className="hover:underline">Jules Giraud</a>. All Rights Reserved.
-                </span>
-                <ul className="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
-                    <li>
-                        <Link to="/about" className="hover:underline me-4 md:me-6">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/privacy-policy" className="hover:underline me-4 md:me-6">Privacy Policy</Link>
-                    </li>
-                    <li>
-                        <Link to="/licensing" className="hover:underline me-4 md:me-6">Licensing</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact" className="hover:underline">Contact</Link>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-    );
+const Footer = () => {
+    return <footer className='bg-green-500 rounded-t-2xl flex lg:min-h-[80px] overflow-hidden'>
+        <div className='md:responsive-container flex flex-col-reverse xl:flex-row md:items-center md:justify-between text-white w-full py-6 md:pt-4 md:pb-6 xl:py-0 gap-8 md:gap-2 xl:gap-0'>
+            <span className="block px-6">
+                © 2024 <a href="https://jules-giraud.xyz" className="hover:underline">Jules Giraud</a>. All Rights Reserved.
+            </span>
+            <ul className='flex flex-col md:flex-row md:items-center'>
+                <ListItem to="/a-propos">A propos</ListItem>
+                <ListItem to="/politique-de-confidentialite">Politique de confidentialité</ListItem>
+                <ListItem to="/mentions-legales">Mentions légales</ListItem>
+                <ListItem to="/contact">Contact</ListItem>
+            </ul>
+        </div>
+    </footer>
 }
 
 export default Footer;
+
+const ListItem = ({ children, ...props }) => <li className='last-of-type:-mr-6 shrink-0'><Link {...props} className='hover:underline px-6 py-2 md:py-4 block'>{children}</Link></li>
