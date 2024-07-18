@@ -1,20 +1,36 @@
-import { Link } from 'react-router-dom';
-import Heading from "../Heading/Heading"
+import React from 'react';
 
-const RecipeCard = ({ title, image, text, slug, price }) => {
+const BASE_IMAGE_URL = 'https://cook.jules-giraud.xyz'; // Préfixe pour les images
 
-    let limitText = text.length > 140 ? `${text.slice(0, 140)}...` : text
+const RecipeCard = ({ title, description, price = 0, image, dishes }) => {
+    const imageUrl = `${BASE_IMAGE_URL}${image}`; // Concaténer le préfixe avec le chemin d'image
 
-    return <Link to={slug ?? "#"} className='flex flex-col gap-6 group'>
-        <div className='relative aspect-[16/14] overflow-hidden rounded-xl after:content-[""] after:absolute after:inset-0 after:duration-300 after:ease-out after:bg-green-700/0 group-hover:after:bg-green-700/40 flex items-center justify-center'>
-        <span className='absolute z-20 text-white text-2xl opacity-0 group-hover:opacity-100 duration-300 ease-out'>Voir plus</span>
-            <img src={image} className='absolute inset-0 h-full w-full object-cover group-hover:scale-110 duration-500 ease-out' />
+    return (
+        <div className="p-4 bg-white shadow-lg rounded-lg">
+            <img src={imageUrl} alt={title} className="w-full h-48 object-cover rounded-t-lg" />
+            <div className="mt-4">
+                <h2 className="text-xl font-semibold">{title}</h2>
+                <p className="text-gray-700">{description}</p>
+                <p className="text-indigo-600 font-bold">${price.toFixed(2)}</p>
+            </div>
+            <div className="mt-4">
+                <h3 className="text-lg font-semibold">Dishes:</h3>
+                {dishes && dishes.length > 0 ? (
+                    <ul>
+                        {dishes.map((dish) => (
+                            <li key={dish.id} className="mt-2">
+                                <p className="font-semibold">{dish.title}</p>
+                                <p>{dish.description}</p>
+                                <p>Preparation Time: {dish.timePrepare} minutes</p>
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>No dishes available.</p>
+                )}
+            </div>
         </div>
-        <div className='flex flex-col gap-3'>
-            {title && <Heading level="3">{title}</Heading>}
-            {text && <p>{limitText}</p>}
-        </div>
-    </Link>
-}
+    );
+};
 
-export default RecipeCard
+export default RecipeCard;
