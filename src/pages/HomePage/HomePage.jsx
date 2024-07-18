@@ -1,167 +1,52 @@
-import styles from './HomePage.module.scss';
-import { Link } from 'react-router-dom';
-import dish1 from '../../assets/dishes/Falafel-Pita-by-PictureTheRecipe.jpg';
-import dish2 from '../../assets/dishes/salade-chaude-automne-legumes.jpg';
-import dish3 from '../../assets/dishes/vue-dessus-delicieuse-tortilla-espagnole.jpg';
-import dish4 from '../../assets/dishes/pates.png';
-import card_background from '../../assets/card-background-home.svg';
-const HomePage = () => {
-    return (
-        <main className={`${styles.homemain} w-4/5 mx-auto flex flex-col items-center`}>
-            <h1>Découvrez vos futurs plats préférés</h1>
-            <div>
-                <div class=" max-w-2xl  py-16  sm:py-12 lg:max-w-7xl">
-                    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                        <div class="group relative">
-                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                <img src={dish1} alt="titre de l'image" class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-                            </div>
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700">
-                                        <a href="#">
-                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                            Boulettes vegan
-                                        </a>
-                                    </h3>
-                                    <p class="mt-1 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt voluptatum mollitia minima ea maxime laboriosam reiciendis reprehenderit expedita, recusandae, minus aut voluptas ipsam sapiente consectetur nemo tempora corporis facilis!</p>
-                                </div>
-                                <p class="text-sm font-medium text-gray-900">€35</p>
-                            </div>
-                        </div>
-                        <div class="group relative">
-                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                <img src={dish2} alt="Front of men's Basic Tee in white." class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-                            </div>
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700">
-                                        <a href="#">
-                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                            Basic Tee
-                                        </a>
-                                    </h3>
-                                    <p class="mt-1 text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A debitis libero ratione harum aspernatur eum incidunt, dolorem alias, pariatur autem molestiae reprehenderit minus, nostrum nesciunt quidem. Tenetur deserunt pariatur distinctio.</p>
-                                </div>
-                                <p class="text-sm font-medium text-gray-900">€35</p>
-                            </div>
-                        </div>
-                        <div class="group relative">
-                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                <img src={dish3} alt="Front of men's Basic Tee in white." class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-                            </div>
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700">
-                                        <a href="#">
-                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                            Basic Tee
-                                        </a>
-                                    </h3>
-                                    <p class="mt-1 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ea, animi libero fugit dolore, rem aut itaque officiis, quibusdam numquam voluptas sapiente ullam iure. Necessitatibus porro in harum. Dolore, eligendi?</p>
-                                </div>
-                                <p class="text-sm font-medium text-gray-900">€35</p>
-                            </div>
-                        </div>
-                        <div class="group relative">
-                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                <img src={dish4} alt="Front of men's Basic Tee in white." class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-                            </div>
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700">
-                                        <a href="#">
-                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                            Pates delicieusement accompagnées d'herbes et de leur touche de fromage
-                                        </a>
-                                    </h3>
-                                    <p class="mt-1 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eos ipsum perferendis culpa minus tenetur suscipit? Nobis quo labore quisquam a consectetur iusto voluptatem vel culpa eligendi? Nisi, necessitatibus. Culpa!</p>
-                                </div>
-                                <p class="text-sm font-medium text-gray-900">€35</p>
-                            </div>
-                        </div>
-                        <div class="group relative">
-                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                <img src={dish1} alt="titre de l'image" class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-                            </div>
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700">
-                                        <a href="#">
-                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                            Boulettes vegan
-                                        </a>
-                                    </h3>
-                                    <p class="mt-1 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt voluptatum mollitia minima ea maxime laboriosam reiciendis reprehenderit expedita, recusandae, minus aut voluptas ipsam sapiente consectetur nemo tempora corporis facilis!</p>
-                                </div>
-                                <p class="text-sm font-medium text-gray-900">€35</p>
-                            </div>
-                        </div>
-                        <div class="group relative">
-                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                <img src={dish2} alt="Front of men's Basic Tee in white." class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-                            </div>
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700">
-                                        <a href="#">
-                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                            Basic Tee
-                                        </a>
-                                    </h3>
-                                    <p class="mt-1 text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A debitis libero ratione harum aspernatur eum incidunt, dolorem alias, pariatur autem molestiae reprehenderit minus, nostrum nesciunt quidem. Tenetur deserunt pariatur distinctio.</p>
-                                </div>
-                                <p class="text-sm font-medium text-gray-900">€35</p>
-                            </div>
-                        </div>
-                        <div class="group relative">
-                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                <img src={dish4} alt="Front of men's Basic Tee in white." class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-                            </div>
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700">
-                                        <a href="#">
-                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                            Pates delicieusement accompagnées d'herbes et de leur touche de fromage
-                                        </a>
-                                    </h3>
-                                    <p class="mt-1 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eos ipsum perferendis culpa minus tenetur suscipit? Nobis quo labore quisquam a consectetur iusto voluptatem vel culpa eligendi? Nisi, necessitatibus. Culpa!</p>
-                                </div>
-                                <p class="text-sm font-medium text-gray-900">€35</p>
-                            </div>
-                        </div>
-                        <div class="group relative">
-                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                <img src={dish3} alt="Front of men's Basic Tee in white." class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-                            </div>
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700">
-                                        <a href="#">
-                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                            Basic Tee
-                                        </a>
-                                    </h3>
-                                    <p class="mt-1 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ea, animi libero fugit dolore, rem aut itaque officiis, quibusdam numquam voluptas sapiente ullam iure. Necessitatibus porro in harum. Dolore, eligendi?</p>
-                                </div>
-                                <p class="text-sm font-medium text-gray-900">€35</p>
-                            </div>
-                        </div>
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Grid from "../../components/Grid/Grid";
+import RecipeCard from "../../components/RecipeCard/RecipeCard";
+import { useAuth } from "../../components/Auth/AuthContext";
+import BASE_API_URL from '../../config'; // Importer BASE_URL depuis la configuration
 
-                    </div>
-                </div>
-                <div className={`${styles['card-1']} m-4 relative`}>
-                    <img src={card_background} alt="background" className={`${styles['card-background']} absolute  `} />
-                    <div className={`${styles['card-content']} relative pl-40 pt-20 z-10`}>
-                        <p class='kadwa-bold'>Envie de découvrir un univers à part entier ?</p>
-                        <p class='kadwa-bold'>Découvrez le chef qui vous convient</p>
-                        <Link to="/chefs" className={styles.button}></Link>
-                    </div>
-                </div>
-            </div>
+const HomePage = () => {
+    const { token } = useAuth(); // Utiliser le token du contexte
+    const [data, setData] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`${BASE_API_URL}/api/menu`, { // Utiliser BASE_URL ici
+                    headers: {
+                        Authorization: `Bearer ${token}`, // Ajouter le token dans l'en-tête Authorization
+                    },
+                });
+                setData(response.data); // Assumer que la réponse contient les données dans `response.data`
+            } catch (error) {
+                setError('Failed to fetch data.');
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, [token]);
+
+    return (
+        <main className="min-h-[calc(100vh-376px)] md:min-h-[calc(100vh-256px)] xl:min-h-[calc(100vh-208px)]">
+            <Grid title="Qu'allons-nous commander aujourd'hui ?">
+                {error && <p className="text-red-500 text-center">{error}</p>}
+                {data && data.length
+                    ? data.map((item) => (
+                        <RecipeCard
+                            key={item.id}
+                            title={item.title}
+                            description={item.description}
+                            price={item.price}
+                            image={item.image}
+                            dishes={item.dishes}
+                        />
+                    ))
+                    : <p className="text-center">No data available.</p>}
+            </Grid>
         </main>
     );
-}
+};
 
 export default HomePage;

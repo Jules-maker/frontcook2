@@ -4,21 +4,20 @@
     background-color: var(--primary-color);
     color: var(--text-color-white);
     font-family: var(--font-family);
-    height: var(--header-height);
-    
-    nav ul {
-        margin-left:1%;
-        li {
-            margin-right: 10%;
-            a {
-                color: var(--text-color-white);
-            }
-        }
-    }
+    // height: var(--header-height);
+    // border: 1px solid #0300ad;
+    // nav ul {
+    //     margin-left:1%;
+    //     li {
+    //         margin-right: 10%;
+    //         a {
+    //             color: var(--text-color-white);
+    //         }
+    //     }
+    // }
 }
 @media (prefers-color-scheme: dark) {
     .masthead {
-        
         background-color: var(--secondary-color);
     }
     //TODO: ajouter les styles pour le logo
