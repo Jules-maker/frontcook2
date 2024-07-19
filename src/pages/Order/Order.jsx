@@ -18,8 +18,8 @@ const Order = () => {
   return (
     <>
       <h1>Order</h1>
-      <div class="bg-white p-8 rounded-md w-full">
-        <div class=" flex items-center justify-between pb-6">
+      <div class="bg-white p-14 rounded-md w-full sm:mb-36">
+        <div class="flex items-center justify-between pb-6">
           <div>
             <h2 class="text-gray-600 font-semibold">Products Order</h2>
             <span class="text-xs">All products item</span>
@@ -39,7 +39,7 @@ const Order = () => {
                 />
               </svg>
               <input
-                class="bg-gray-50 outline-none ml-1 block "
+                class="bg-gray-50 outline-none ml-1 block"
                 type="text"
                 name=""
                 id=""
@@ -62,19 +62,16 @@ const Order = () => {
               <table class="min-w-full leading-normal">
                 <thead>
                   <tr>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      Name
+                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-green-700 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                      Chef
                     </th>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      products
+                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-green-700 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                      Produit
                     </th>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      Created at
+                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-green-700 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                      À récupérer
                     </th>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      QRT
-                    </th>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-green-700 text-left text-xs font-semibold text-white uppercase tracking-wider">
                       Status
                     </th>
                   </tr>
@@ -82,176 +79,111 @@ const Order = () => {
                 <tbody>
                   <tr>
                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <div class="flex items-center">
-                        <div class="flex-shrink-0 w-10 h-10">
-                          <img
-                            class="w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                            alt=""
-                          />
-                        </div>
-                        <div class="ml-3">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            Vera Carpenter
-                          </p>
-                        </div>
-                      </div>
+                      Jules Giraud
                     </td>
                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">Admin</p>
+                      Falafel
                     </td>
                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
-                        Jan 21, 2020
-                      </p>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">43</p>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                        <span
-                          aria-hidden
-                          class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
-                        ></span>
-                        <span class="relative">Active</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <div class="flex items-center">
-                        <div class="flex-shrink-0 w-10 h-10">
-                          <img
-                            class="w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                            alt=""
-                          />
-                        </div>
-                        <div class="ml-3">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            Blake Bowman
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">Editor</p>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
-                        Jan 01, 2020
-                      </p>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">77</p>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                        <span
-                          aria-hidden
-                          class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
-                        ></span>
-                        <span class="relative">Active</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <div class="flex items-center">
-                        <div class="flex-shrink-0 w-10 h-10">
-                          <img
-                            class="w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1540845511934-7721dd7adec3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                            alt=""
-                          />
-                        </div>
-                        <div class="ml-3">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            Dana Moore
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">Editor</p>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
-                        Jan 10, 2020
-                      </p>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">64</p>
+                      15/08/24
                     </td>
                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                       <span class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight">
                         <span
                           aria-hidden
-                          class="absolute inset-0 bg-orange-200 opacity-50 rounded-full"
+                          class="absolute inset-0 bg-yellow-500 opacity-50 rounded-full"
                         ></span>
-                        <span class="relative">Suspended</span>
+                        <span class="relative">En attente</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-gray-100 text-sm">
+                      John Doe
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-gray-100 text-sm">
+                      Tacos menu extra spicy
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-gray-100 text-sm">
+                      01/08/24
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-gray-100 text-sm">
+                      <span class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight">
+                        <span
+                          aria-hidden
+                          class="absolute inset-0 bg-yellow-500 opacity-50 rounded-full"
+                        ></span>
+                        <span class="relative">En attente</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      La régalière
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      Menu Brunch ensoleillé
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      23/07/24
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <span class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight">
+                        <span
+                          aria-hidden
+                          class="absolute inset-0 bg-yellow-500 opacity-50 rounded-full"
+                        ></span>
+                        <span class="relative">En attente</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-gray-100 text-sm">
+                      Les wrapettes
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-gray-100 text-sm">
+                      Délices d’Orient
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-gray-100 text-sm">
+                      20/08/23
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-gray-100 text-sm">
+                      <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                        <span
+                          aria-hidden
+                          class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                        ></span>
+                        <span class="relative">Récupérée</span>
                       </span>
                     </td>
                   </tr>
                   <tr>
                     <td class="px-5 py-5 bg-white text-sm">
-                      <div class="flex items-center">
-                        <div class="flex-shrink-0 w-10 h-10">
-                          <img
-                            class="w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&h=160&w=160&q=80"
-                            alt=""
-                          />
-                        </div>
-                        <div class="ml-3">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            Alonzo Cox
-                          </p>
-                        </div>
-                      </div>
+                      Jules Giraud
                     </td>
                     <td class="px-5 py-5 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">Admin</p>
+                      Menu MK8
                     </td>
                     <td class="px-5 py-5 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
-                        Jan 18, 2020
-                      </p>
+                      12/03/22
                     </td>
                     <td class="px-5 py-5 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">70</p>
-                    </td>
-                    <td class="px-5 py-5 bg-white text-sm">
-                      <span class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
+                      <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                         <span
                           aria-hidden
-                          class="absolute inset-0 bg-red-200 opacity-50 rounded-full"
+                          class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
                         ></span>
-                        <span class="relative">Inactive</span>
+                        <span class="relative">Récupérée</span>
                       </span>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <div class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
-                <span class="text-xs xs:text-sm text-gray-900">
-                  Showing 1 to 4 of 50 Entries
-                </span>
-                <div class="inline-flex mt-2 xs:mt-0">
-                  <button class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-l">
-                    Prev
-                  </button>
-                  &nbsp; &nbsp;
-                  <button class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-r">
-                    Next
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
+
     </>
   );
 };

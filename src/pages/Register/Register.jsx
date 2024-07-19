@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import DOMPurify from 'dompurify'; // Importez une bibliothèque de nettoyage HTML
 import BASE_API_URL from '../../config';
 
 const Register = () => {
@@ -13,21 +14,40 @@ const Register = () => {
     const [success, setSuccess] = useState(null);
     const navigate = useNavigate();
 
+    useEffect(() => {
+        let timer;
+        if (success) {
+            timer = setTimeout(() => navigate('/login'), 2000); // Redirige après un délai
+        }
+        return () => clearTimeout(timer);
+    }, [success, navigate]);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         setError(null);
         setSuccess(null);
 
+        // Valider les données avant l'envoi
+        if (!validateEmail(email)) {
+            setError('Invalid email format.');
+            return;
+        }
+
         const registerData = { email, firstname, lastname, plainPassword, agreeTerms };
 
         try {
             await axios.post(`${BASE_API_URL}/api/user/register`, registerData);
-            setSuccess('Registration successful! Redirecting to login...');
-            setTimeout(() => navigate('/login'), 2000); // Redirige après un délai
+            setSuccess(DOMPurify.sanitize('Vous êtes inscrit avec succès! voyons si  vous pouvez vous connecter maintenant...'));
         } catch (error) {
             console.error('Error:', error);
-            setError('Registration failed: ' + (error.response?.data?.message || 'An error occurred'));
+            setError(DOMPurify.sanitize('Registration failed: ' + (error.response?.data?.message || 'An error occurred')));
         }
+    };
+
+    const validateEmail = (email) => {
+        // Simple regex pour valider l'email
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
     };
 
     return (
@@ -97,7 +117,7 @@ const Register = () => {
                     <div>
                         <button
                             type="submit"
-                            className="flex m-auto  items-center justify-center bg-green-500 text-white font-bold text-lg hover:bg-green-700 p-4 mt-8 rounded w-2/4 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            className="flex m-auto items-center justify-center bg-green-500 text-white font-bold text-lg hover:bg-green-700 p-4 mt-8 rounded w-2/4 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                             Créer un compte
                         </button>
