@@ -10,7 +10,8 @@ import Dashboard from "./pages/Admin/Dashboard/Dashboard";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import Order from "./pages/Order/Order";
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
-import { AuthProvider } from "./components/Auth/AuthContext"; // Assurez-vous que ce chemin est correct
+import { AuthProvider } from "./components/Auth/AuthContext";
+import AuthLayout from "./layouts/AuthLayout"; // Import the new layout
 
 const router = createBrowserRouter([
   {
@@ -20,34 +21,46 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <ProtectedRoute element={<HomePage />} />, // Protéger la page d'accueil
+        element: <ProtectedRoute element={<HomePage />} />, 
       },
       {
         path: "/profil",
-        element: <ProtectedRoute element={<Profil />} />, // Protéger la page de profil
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/register",
-        element: <Register />,
+        element: <ProtectedRoute element={<Profil />} />, 
       },
       {
         path: "/order",
-        element: <ProtectedRoute element={<Order />} />, // Protéger la page de commande
+        element: <ProtectedRoute element={<Order />} />, 
       },
       {
         path: "/admin",
-        element: <ProtectedRoute element={<Admin />} />, // Protéger les pages admin
+        element: <ProtectedRoute element={<Admin />} />, 
         children: [
           {
             index: true,
             element: <Dashboard />,
           },
-          // Ajoutez d'autres routes pour les pages admin si nécessaire
+          // ajouter admin routes ici
         ],
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <AuthLayout />,  // Use the AuthLayout here
+    children: [
+      {
+        index: true,
+        element: <Login />,
+      },
+    ],
+  },
+  {
+    path: "/register",
+    element: <AuthLayout />,  // Use the AuthLayout here
+    children: [
+      {
+        index: true,
+        element: <Register />,
       },
     ],
   },
